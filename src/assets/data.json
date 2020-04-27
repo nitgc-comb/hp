@@ -1,0 +1,99 @@
+{
+  "info": {
+    "update": "2020-04-30",
+    "members": 70,
+    "advisor": [
+      {
+        "type": "顧問",
+        "name": "廣瀬 康之",
+        "department": "環境都市工学科"
+      },
+      {
+        "type": "副顧問",
+        "name": "安田 真",
+        "department": "電気情報工学科"
+      },
+      {
+        "type": "副顧問",
+        "name": "遠藤 登",
+        "department": "電子制御工学科"
+      },
+      {
+        "type": "コーチ",
+        "name": "村重 海月",
+        "department": "電気情報工学科 OB"
+      }
+    ]
+  },
+  "award": {
+    "2019": [
+      {
+        "id": 1,
+        "date": "2019-9-24",
+        "title": "パソコン甲子園 2019",
+        "url": "https://web-ext.u-aizu.ac.jp/pc-concours/2019/final/f_finalteam2019.html",
+        "result": [
+          {
+            "category": "プログラミング部門",
+            "award": "本戦出場",
+            "title": "ねこねこのねこ"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2019-10-14",
+        "title": "第30回 全国高等専門学校 プログラミングコンテスト 都城大会",
+        "url": "http://www.procon.gr.jp/?page_id=71201",
+        "result": [
+          {
+            "category": "競技部門",
+            "award": "本戦出場",
+            "title": "ねこさん同好会",
+            "image": ""
+          },
+          {
+            "category": "パテント審査",
+            "award":  "優秀賞",
+            "title": "ぶらり案内板 -周辺探索補助アプリケーション-",
+            "image": ""
+          },
+          {
+            "category": "パテント審査",
+            "award": "奨励賞",
+            "title": "TBM -Trash Box Manager-",
+            "image": ""
+          }
+        ]
+      }
+    ],
+    "2018": [
+      {
+        "id": 1,
+        "date": "2018-10-14",
+        "title": "第29回 全国高等専門学校 プログラミングコンテスト 阿南大会",
+        "url": "http://www.procon.gr.jp/?page_id=64541",
+        "result": [
+          {
+            "category": "競技部門",
+            "award": "決勝トーナメント進出",
+            "title": "岐阜高専スイーツ同好会",
+            "image": ""
+          },
+          {
+            "category": "課題部門",
+            "award": "敢闘賞",
+            "title": "ACMM -AI Can Make Movie-",
+            "image": ""
+          },
+          {
+            "category": "自由部門",
+            "award": "敢闘賞",
+            "title": "DHS -Drones Help to Survey-",
+            "image": ""
+          }
+        ]
+      }
+    ]
+  }
+}
