@@ -4,9 +4,10 @@
       h3.section-title
         font-awesome-icon(icon="info-circle")
         | どんな部活？
-      el-carousel(v-if="images" height="350px" :interval="5000" trigger="click")
-        el-carousel-item(v-for="item in images" :key="item")
-          img.section-content-img(:src="require(`@/assets/images/${item}.jpg`)")
+      .carousel
+        transition-group(mode="out-in" name="fade" tag="div")
+          .carousel-inner(v-for="(image, index) in images" v-if="currentImage == index" :key="index")
+            img.carousel-img(:src="images[currentImage]")
       ul.point
         li.list-item
           span.highlight プログラミング
@@ -15,18 +16,15 @@
           span.highlight 月・水
           | の放課後で週2回です
           span.highlight (兼部も可能です)
-        li.list-item 基本、
-          span.highlight 情報処理センター2F第3演習室
-          | で活動しています
+        li.list-item
+          span.highlight 情報処理センター2F
+          | で活動しています (工事中は2号館1F奥の実験室を活動場所、2号館3Fゼミナール室を部室としています)
         li.list-item プログラミングについて
           span.highlight 何も分からなくても大丈夫！部員が丁寧に教えます
         li.list-item
           span.highlight プログラミング以外の創作活動
           | も行っています
-      .control-zone
-        router-link.btn.router-btn(to="/about")
-          font-awesome-icon.icon-detail(icon="angle-double-right")
-          | 詳細を見る
+      ToAboutBtn
     section
       h3.section-title
         font-awesome-icon(icon="user-circle")
@@ -41,12 +39,40 @@
 </template>
 
 <script>
+import ToAboutBtn from '../components/ToAboutBtn'
 import info from '../assets/data.json'
 
 export default {
+  data: () => ({
+    currentImage: 0,
+    timer: 0
+  }),
+  components: {
+    ToAboutBtn
+  },
+  created () {
+    this.$nextTick(() => {
+      this.timer = setInterval(() => {
+        this.nextImage()
+      }, 3000)
+    })
+  },
   computed: {
-    images: () => ['members_2', 'plate', 'typing'],
+    images: () => [
+      require('@/assets/images/members_2.jpg'),
+      require('@/assets/images/plate.jpg'),
+      require('@/assets/images/typing.jpg')
+    ],
     clubInfo: () => info.info
+  },
+  methods: {
+    nextImage () {
+      if (this.currentImage === this.images.length - 1) {
+        this.currentImage = 0
+      } else {
+        this.currentImage++
+      }
+    }
   }
 }
 </script>
