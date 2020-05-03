@@ -1,7 +1,7 @@
 {
   "info": {
     "update": "2020-04-30",
-    "members": 70,
+    "members": 23,
     "advisor": [
       {
         "type": "顧問",
@@ -29,7 +29,7 @@
     "2019": [
       {
         "id": 1,
-        "date": "2019-9-24",
+        "date": "2019年11月9日, 10日",
         "title": "パソコン甲子園 2019",
         "url": "https://web-ext.u-aizu.ac.jp/pc-concours/2019/final/f_finalteam2019.html",
         "result": [
@@ -42,7 +42,7 @@
       },
       {
         "id": 2,
-        "date": "2019-10-14",
+        "date": "2019年10月27日, 28日",
         "title": "第30回 全国高等専門学校 プログラミングコンテスト 都城大会",
         "url": "http://www.procon.gr.jp/?page_id=71201",
         "result": [
@@ -70,7 +70,7 @@
     "2018": [
       {
         "id": 1,
-        "date": "2018-10-14",
+        "date": "2018年10月14日, 15日",
         "title": "第29回 全国高等専門学校 プログラミングコンテスト 阿南大会",
         "url": "http://www.procon.gr.jp/?page_id=64541",
         "result": [
