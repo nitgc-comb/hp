@@ -8,10 +8,10 @@
           router-link.navi-item(to="/") Home
           router-link.navi-item(to="/about") About
           // router-link.navi-item(to="/works") Works
-      .jumbotron
-        h2.jumbotron-text Welcome to
-          br
-          | NITGC Computer Club
+    .jumbotron
+      h2.jumbotron-text Welcome to
+        br
+        | NITGC Computer Club
     .container
       transition(mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut")
         router-view

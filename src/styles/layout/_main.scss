@@ -8,11 +8,14 @@
   }
 
   h3.section-title {
+    margin-bottom: 0.8rem;
     padding: 10px;
     font-size: 1.8em;
-    color: #a0a0fc;
+    color: #fff;
+    background-color: #6d88fd;
     border: solid 1px #c6c6f8;
-    border-left: solid 5px #c1bdfd;
+    border-radius: 30px;
+    filter: drop-shadow(5px 5px 5px rgba(160, 160, 252, 0.7));
   }
 
   h4.sub-section-title {
