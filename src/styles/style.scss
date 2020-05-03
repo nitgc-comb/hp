@@ -358,6 +358,10 @@ svg {
 
   .container {
     width: 80%;
+
+    ul.point {
+      margin: 20px auto;
+    }
   }
 }
 
@@ -446,7 +450,9 @@ svg {
       font-size: 1.5em;
     }
 
-    ul {
+    ul.point {
+      margin: 20px auto;
+
       li.list-item {
         line-height: 1.4em;
         margin-bottom: 8px;
@@ -456,9 +462,10 @@ svg {
     .section-content {
       display: inline-block;
     }
-
-    img.carousel-img {
-      width: 90%;
+    .carousel-inner {
+      img.carousel-img {
+        width: 100%;
+      }
     }
 
     img.section-content-img, .content-explain {
