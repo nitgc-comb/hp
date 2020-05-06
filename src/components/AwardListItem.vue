@@ -1,7 +1,7 @@
 <template lang="pug">
   .event-card
     .event-title
-      a(:href="url")
+      a(:href="url" target="block")
         | {{ title }}
         font-awesome-icon(icon="external-link-alt")
       .event-date {{ date }}
@@ -13,11 +13,19 @@
 
 <script>
 export default {
-  props: [
-    'title',
-    'date',
-    'url',
-    'result'
-  ]
+  props: {
+    title: {
+      type: String,
+      default: null
+    },
+    date: {
+      type: String,
+      default: null
+    },
+    result: {
+      type: Object,
+      default: null
+    }
+  }
 }
 </script>

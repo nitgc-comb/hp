@@ -2,7 +2,7 @@
   div
     section
       SectionTitle(icon="check-circle" title="活動内容")
-      SectionContent(icon="laptop-code" image="members_2" :left="true")
+      SectionContent(icon="laptop-code" image="members" :left="true")
         template(#title) C言語講座
         template(#description)
           | 4月から9月にかけて、新たに入った人を対象にC言語を用いたプログラミング講座を行っています。
