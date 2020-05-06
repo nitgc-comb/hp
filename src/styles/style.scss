@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400");
-@import "./foundation/_reboot.css";
-@import "./foundation/_animate.css";
+@import "./_reboot.css";
+@import "./_animate.css";
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-left: solid 1px #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aabaff;
+  border-radius: 8px;
+}
 
 body {
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -18,46 +31,41 @@ svg {
   margin: 0 12px;
 }
 
-.header {
+header {
   display: flex;
   position: sticky;
   top: 0;
   z-index: 10;
+  width: 100%;
+  padding: 5px;
+  background-color: #fefefe;
+  border-bottom: solid 1px #ccccff;
 
-  .menubar {
-    width: 100%;
-    padding: 5px;
-    background-color: #fefefe;
-    border-bottom: solid 1px #ccccff;
-  
-    .site-title {
-      display: inline-block;
-      margin: 3px 0 0 5vw;
-      h1 {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 300;
-        color: #3f3f3f;
-      }
+  h1.site-title {
+    display: inline-block;
+    margin: 3px 0 0 5vw;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    color: #3f3f3f;
+  }
+
+  .navi-bar {
+    display: inline-block;
+    margin-left: 50px;
+
+    a.navi-item {
+      font-family: "Ubuntu", sans-serif;
+      margin: 10px 20px;
+      padding: 5px 0;
+      font-size: 1.1em;
+      color: #5e5e5e;
+      transition: all 300ms 0s ease;
     }
-  
-    .navi-bar {
-      display: inline-block;
-      margin-left: 50px;
-  
-      a.navi-item {
-        font-family: "Ubuntu", sans-serif;
-        margin: 10px 20px;
-        padding: 12px 0;
-        font-size: 1.1em;
-        color: #5e5e5e;
-        transition: all 300ms 0s ease;
-      }
-  
-      a.navi-item:hover {
-        text-decoration: none;
-        color: #a0a0fc;
-        border-bottom: solid 2px #a0a0fc;
-      }
+
+    a.navi-item:hover {
+      text-decoration: none;
+      color: #a0a0fc;
+      border-bottom: solid 2px #a0a0fc;
     }
   }
 }
@@ -78,21 +86,6 @@ svg {
   }
 }
 
-.nav-btn-group {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-
-  .nav-btn {
-    display: inline-block;
-    width: 31%;
-    height: 60px;
-    margin: 1%;
-    padding: 10px 30px;
-    background-color: #ff7b91;
-  }
-}
-
 .container {
   max-width: 1160px;
   margin: 30px auto 10px;
@@ -103,7 +96,7 @@ svg {
   }
 
   h3.section-title {
-    margin-bottom: 0.8rem;
+    margin-bottom: 20px;
     padding: 10px;
     font-size: 1.8em;
     color: #fff;
@@ -112,38 +105,7 @@ svg {
     border-radius: 30px;
     filter: drop-shadow(5px 5px 5px rgba(160, 160, 252, 0.7));
   }
-
-  .section-content {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-  }
-
-  .img-l {
-    img {
-      order: 1;
-    }
-    .content-explain {
-      order: 2;
-    }
-  }
-
-  .img-r {
-    img {
-      order: 2;
-    }
-    .content-explain {
-      order: 1;
-    }
-  }
-
-  .content-explain {
-    display: inline-block;
-    width: 48%;
-    margin: 1%;
-    border-radius: 10px;
-  }
-
+  
   h4.sub-section-title {
     margin-top: 10px;
     padding: 5px;
@@ -151,134 +113,48 @@ svg {
     color: #5e5e5e;
   }
 
+  /* home */
+
   .carousel {
     position: relative;
     display: flex;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-  }
-
-  .carousel-inner {
+    margin-bottom: 20px;
+    padding: 10px;
 
     img.carousel-img {
       max-width: 700px;
       vertical-align: top;
-      padding: 10px;
-      border-radius: 20px;
+      border-radius: 10px;
       object-fit: cover;
     }
   }
 
-  img.section-content-img {
-    vertical-align: top;
-    width: 48%;
-    padding: 10px;
-    border-radius: 20px;
-  }
-
-  .el-carousel__item {
-    text-align: center;
-  }
-
-  p.description {
-    margin-bottom: 10px;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    color: #5e5e5e;
-    filter: drop-shadow(0px 0.5rem 0.6rem rgba(160, 160, 252, 0.3));
-  }
-
-  ul.point {
+  .appeal-list {
     max-width: 800px;
-    margin: 50px auto;
-    padding: 30px 30px 30px 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 30px;
     background-color: #fff;
     filter: drop-shadow(0px 0.5rem 0.8rem rgba(160, 160, 252, 0.3));
     border-radius: 10px;
 
-    li.list-item {
-      color: #5e5e5e;
-    }
-  }
-
-  h4.year-section-title {
-    position: relative;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 5px;
-    border-bottom: solid 1px rgba(198, 198, 248, 0.6);
-    color: #5e5e5e;
-    text-align: center;
-    font-size: 1.6em;
-  }
-
-  .history {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    color: #5e5e5e;
-
-    .event-card {
-      max-width: 800px;
-      margin: 10px auto;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: #fff;
-      filter: drop-shadow(0px 0.5rem 0.8rem rgba(160, 160, 252, 0.3));
-
-      .event-title {
-        position: relative;
+    .appeal-list-content {
+      .list-item {
         margin-bottom: 10px;
         color: #5e5e5e;
-        font-size: 1.4em;
-        font-weight: 700;
-
-        a {
-          color: #6d88fd;
-          text-decoration: none;
-          transition: all 300ms 0s ease;
-        }
-
-        a:hover {
+        font-size: 1rem;
+  
+        svg.check-icon {
           color: #ff7b91;
         }
-
-        .event-date {
-          vertical-align: middle;
-          color: #9f9f9f;
-          font-size: 0.7em;
-          font-weight: 500;
-        }
       }
+    }
 
-      .event-card-item {
-        padding: 10px;
-        border-top: solid 1px #e8ebff;
-
-        .item-category {
-          display: inline-block;
-          margin: 5px 10px 10px 0;
-          padding: 5px 15px;
-          border-radius: 7px;
-          color: #fff;
-          background-color: #888;
-        }
-
-        .item-award {
-          margin: 5px 10px 10px 0;
-          padding: 5px 15px;
-          display: inline-block;
-          border-radius: 7px;
-          color: #fff;
-          background-color: #f3ae48;
-        }
-      }
-
-      :first-child {
-        border-top-left-radius: 10px;
-      }
+    .appeal-list-footer {
+      color: #9f9f9f;
     }
   }
 
@@ -287,6 +163,7 @@ svg {
     text-align: center;
 
     a.btn.router-btn {
+      display: inline-block;
       margin-bottom: 20px;
       padding: 10px 50px;
       color: #fff;
@@ -335,9 +212,141 @@ svg {
       }
     }
   }
+
+  /* about */
+
+  .img-l {
+    img {
+      order: 1;
+    }
+    .content-explain {
+      order: 2;
+    }
+  }
+
+  .img-r {
+    img {
+      order: 2;
+    }
+    .content-explain {
+      order: 1;
+    }
+  }
+
+  .section-content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 10px;
+  }
+
+  .content-explain {
+    display: inline-block;
+    width: 48%;
+    margin: 1%;
+    border-radius: 10px;
+  }
+
+  img.section-content-img {
+    vertical-align: top;
+    width: 48%;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .el-carousel__item {
+    text-align: center;
+  }
+
+  p.description {
+    margin-bottom: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #5e5e5e;
+    filter: drop-shadow(0px 0.5rem 0.6rem rgba(160, 160, 252, 0.3));
+  }
+
+  h4.year-section-title {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 5px;
+    border-bottom: solid 1px rgba(198, 198, 248, 0.6);
+    color: #5e5e5e;
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  .history {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #5e5e5e;
+
+    .event-card {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #fff;
+      filter: drop-shadow(0px 0.5rem 0.8rem rgba(160, 160, 252, 0.3));
+
+      .event-title {
+        position: relative;
+        margin-bottom: 10px;
+        color: #5e5e5e;
+        font-size: 1.4em;
+        font-weight: 700;
+
+        a {
+          color: #6d88fd;
+          text-decoration: none;
+          transition: all 300ms 0s ease;
+        }
+
+        a:hover {
+          color: #ff7b91;
+        }
+
+        .event-date {
+          vertical-align: middle;
+          color: #9f9f9f;
+          font-size: 0.7em;
+          font-weight: 500;
+        }
+      }
+
+      .event-card-item {
+        padding: 10px;
+        border-top: solid 1px #e8ebff;
+
+        .item-category {
+          display: inline-block;
+          margin: 5px 10px 10px 0;
+          padding: 3px 6px;
+          border-radius: 4px;
+          color: #fff;
+          background-color: #888;
+        }
+
+        .item-award {
+          margin: 5px 10px 10px 0;
+          padding: 3px 6px;
+          display: inline-block;
+          border-radius: 4px;
+          color: #fff;
+          background-color: #f3ae48;
+        }
+      }
+
+      :first-child {
+        border-top-left-radius: 10px;
+      }
+    }
+  }
 }
 
-.footer {
+footer {
   height: 70px;
   padding: 20px;
   background-color: #9f9f9f;
@@ -369,7 +378,7 @@ svg {
   .menubar {
     .site-title {
       margin-left: 5vw;
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
 
@@ -406,7 +415,7 @@ svg {
       }
     }
 
-    .el-carousel {
+    .carousel {
       height: 300px;
       
       img.carousel-img {
@@ -421,18 +430,18 @@ svg {
 }
 
 @media screen and (max-width: 600px) {
-  .menubar {
-    text-align: center;
-    .site-title {
-      margin-left: 0;
-      font-size: 1.3em;
-    }
-
-    .navi-bar {
-      display: block;
-      margin: 8px 0;
-      a.navi-item {
-        margin: 8px;
+  .header {
+    .menubar {
+      .site-title {
+        margin-left: px;
+        font-size: 0.9em;
+      }
+  
+      .navi-bar {
+        margin-left: 20px;
+        a.navi-item {
+          margin: 8px;
+        }
       }
     }
   }
@@ -462,7 +471,8 @@ svg {
     .section-content {
       display: inline-block;
     }
-    .carousel-inner {
+
+    .carousel {
       img.carousel-img {
         width: 100%;
       }
