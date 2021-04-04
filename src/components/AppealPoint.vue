@@ -14,7 +14,7 @@
       .list-item
         font-awesome-icon.check-icon(icon="check-square")
         span.highlight 情報処理センター2F
-        | で活動しています ※
+        | で活動しています
       .list-item
         font-awesome-icon.check-icon(icon="check-square")
         | プログラミングについて
@@ -23,5 +23,4 @@
         font-awesome-icon.check-icon(icon="check-square")
         span.highlight プログラミング以外の創作活動
         | も行っています
-    .appeal-list-footer ※工事中は2号館1F奥の実験室を活動場所、2号館3Fゼミナール室を部室としています
 </template>
