@@ -7,6 +7,7 @@ import { Carousel, CarouselItem } from 'element-ui'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faInfoCircle,
+  faQuestionCircle,
   faUserCircle,
   faAngleDoubleRight,
   faCheckCircle,
@@ -24,6 +25,7 @@ Vue.use(CarouselItem)
 
 library.add(
   faInfoCircle,
+  faQuestionCircle,
   faUserCircle,
   faAngleDoubleRight,
   faCheckCircle,
