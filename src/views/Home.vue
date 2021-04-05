@@ -1,8 +1,13 @@
 <template lang="pug">
   div
-    section.swing
+    section
       h3.section-title
         font-awesome-icon(icon="info-circle")
+        | お知らせ
+      NewsCard
+    section.swing
+      h3.section-title
+        font-awesome-icon(icon="question-circle")
         | どんな部活？
       .carousel
         img.carousel-img(src="@/assets/images/top.jpg")
@@ -23,17 +28,21 @@
 
 <script>
 import AppealPoint from '@/components/AppealPoint.vue'
-import ToAboutBtn from '../components/ToAboutBtn'
+import NewsCard from '@/components/NewsCard.vue'
+import ToAboutBtn from '@/components/ToAboutBtn.vue'
 import info from '../assets/data.json'
 
 export default {
-  data: () => ({
-    currentImage: 0,
-    timer: 0
-  }),
   components: {
     AppealPoint,
-    ToAboutBtn
+    ToAboutBtn,
+    NewsCard
+  },
+  data () {
+    return {
+      currentImage: 0,
+      timer: 0
+    }
   },
   created () {
     this.$nextTick(() => {
