@@ -20,9 +20,6 @@ jobs:
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Set GAID
-        run: echo "GAID=${GAID} >> $GITHUB_ENV"
-
       - name: Install vue-cli
         run: yarn global add @vue/cli
       

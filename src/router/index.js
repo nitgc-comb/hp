@@ -29,7 +29,7 @@ const router = new VueRouter({
 if (process.env.NODE_ENV === 'production') {
   Vue.use(VueGtag, {
     config: {
-      id: process.env.GAID
+      id: 'UA-194000488-1'
     }
   })
 }
