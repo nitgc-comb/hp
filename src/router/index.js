@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
     config: {
       id: 'UA-194000488-1'
     }
-  })
+  }, router)
 }
 
 export default router
