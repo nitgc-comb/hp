@@ -23,7 +23,11 @@ export default {
       default: null
     },
     result: {
-      type: Object,
+      type: Array,
+      default: () => []
+    },
+    url: {
+      type: String,
       default: null
     }
   }
