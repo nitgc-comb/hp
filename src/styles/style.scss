@@ -156,6 +156,15 @@ header {
 
     .card-text {
       margin-bottom: 20px;
+
+      h3, h4 {
+        margin: 10px 0;
+        color: #5e5e5e;
+      }
+
+      ul {
+        padding: 0 20px;
+      }
     }
 
     .card-actions {
