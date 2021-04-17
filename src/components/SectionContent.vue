@@ -14,11 +14,23 @@
 
 <script>
 export default {
-  props: [
-    'icon',
-    'image',
-    'left',
-    'right'
-  ]
+  props: {
+    icon: {
+      type: String,
+      default: ''
+    },
+    image: {
+      type: String,
+      default: ''
+    },
+    left: {
+      type: Boolean,
+      default: false
+    },
+    right: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>

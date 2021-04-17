@@ -20,7 +20,12 @@ export default {
       awardData: award.award[this.year]
     }
   },
-  props: ['year'],
+  props: {
+    year: {
+      type: String,
+      default: ''
+    }
+  },
   components: {
     AwardListItem
   }
