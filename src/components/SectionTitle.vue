@@ -6,9 +6,15 @@
 
 <script>
 export default {
-  props: [
-    'icon',
-    'title'
-  ]
+  props: {
+    icon: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
