@@ -1,7 +1,7 @@
 <template lang="pug">
   .card
     .card-title 入部希望の方へ
-    .card-subtitle 2020-04-17
+    .card-subtitle 2023-04-05
     .card-text
       | コンピュータ倶楽部では、入部を希望する方をいつでも募集しています！
       ul
@@ -12,7 +12,7 @@
     .card-actions
       a.btn.router-btn(
         target="blank"
-        href="https://forms.gle/scp9VBHBzX1G9oc68"
+        href="https://forms.gle/TLimTcAVwVqHsPMt6"
       )
         font-awesome-icon.icon-detail(icon="angle-double-right")
         | 問い合わせフォーム
