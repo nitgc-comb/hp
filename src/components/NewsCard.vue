@@ -12,7 +12,7 @@
     .card-actions
       a.btn.router-btn(
         target="blank"
-        href="https://forms.gle/TLimTcAVwVqHsPMt6"
+        href="https://forms.gle/TGHHe3x4NHBYHt1U9"
       )
         font-awesome-icon.icon-detail(icon="angle-double-right")
         | 問い合わせフォーム
