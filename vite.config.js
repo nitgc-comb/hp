@@ -4,6 +4,8 @@ import vuePugPlugin from 'vue-pug-plugin'
 import path from 'path'
 
 export default defineConfig({
+  // FIXME: 本来なら import.meta.env.MODE で取れるが、cjs扱いになってるので修正する必要あり
+  base: process.env.MODE === 'production' ? 'hp/' : './',
   resolve: {
     alias: {
       vue: '@vue/compat',
@@ -15,7 +17,7 @@ export default defineConfig({
       template: {
         compilerOptions: {
           compatConfig: {
-            MODE: 2
+            MODE: 3
           }
         },
         preprocessOptions: {

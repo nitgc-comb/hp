@@ -7,19 +7,15 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.6",
-    "@vue/compat": "^3.4.21",
-    "element-ui": "^2.15.14",
-    "vue": "^3.1.0",
-    "vue-router": "^4"
-  },
-  "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/compat": "^3.4.21",
     "@vue/compiler-sfc": "^3.4.21",
     "element-plus": "^2.6.3",
+    "element-ui": "^2.15.14",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^6.2.2",
     "pathe": "^1.1.2",
@@ -27,8 +23,10 @@
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.74.1",
     "vite": "^5.2.8",
+    "vue": "^3.1.0",
     "vue-gtag": "^2.0.1",
     "vue-pug-plugin": "^2.0.3",
+    "vue-router": "^4",
     "vue-tsc": "^2.0.10"
   },
   "volta": {
