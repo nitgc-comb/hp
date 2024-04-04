@@ -1,36 +1,22 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import VueGtag from 'vue-gtag'
-import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('@/views/Home.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('@/views/About.vue')
   }
 ]
 
-const router = new VueRouter({
+export default createRouter({
   routes,
+  history: createWebHistory(),
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   }
 })
-
-if (process.env.NODE_ENV === 'production') {
-  Vue.use(VueGtag, {
-    config: {
-      id: 'UA-194000488-1'
-    }
-  }, router)
-}
-
-export default router

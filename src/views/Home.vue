@@ -20,8 +20,8 @@
       .club-info
         .club-info-item
           .item-title 部員数
-          .item-value {{ clubInfo.members }}名
-        .club-info-item(v-for="item in clubInfo.advisor")
+          .item-value {{ clubStatus.members }}名
+        .club-info-item(v-for="item in clubStatus.advisor")
           .item-title {{ item.type }}
           .item-value {{ item.name }} ({{ item.department }})
 </template>
@@ -30,7 +30,7 @@
 import AppealPoint from '@/components/AppealPoint.vue'
 import NewsCard from '@/components/NewsCard.vue'
 import ToAboutBtn from '@/components/ToAboutBtn.vue'
-import info from '../assets/data.json'
+import clubData from '@/assets/data.json'
 
 export default {
   components: {
@@ -38,44 +38,8 @@ export default {
     ToAboutBtn,
     NewsCard
   },
-  data () {
-    return {
-      currentImage: 0,
-      timer: 0
-    }
-  },
-  created () {
-    this.$nextTick(() => {
-      this.timer = setInterval(() => {
-        this.nextImage()
-      }, 4000)
-    })
-  },
   computed: {
-    images: () => [
-      {
-        id: 1,
-        img: require('@/assets/images/members.jpg')
-      },
-      {
-        id: 2,
-        img: require('@/assets/images/plate.jpg')
-      },
-      {
-        id: 3,
-        img: require('@/assets/images/typing.jpg')
-      }
-    ],
-    clubInfo: () => info.info
+    clubStatus: () => clubData.info
   },
-  methods: {
-    nextImage () {
-      if (this.currentImage === this.images.length - 1) {
-        this.currentImage = 0
-      } else {
-        this.currentImage++
-      }
-    }
-  }
 }
 </script>

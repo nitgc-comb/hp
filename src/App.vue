@@ -1,10 +1,12 @@
 <template lang="pug">
-  #app.fadeIn
+  .fadeIn
     Header
     Jumbotron
     .container
-      transition(mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut")
-        router-view
+      router-view(v-slot="{ Component }")
+        transition(mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut")
+          keep-alive
+            component(:is="Component")
     Footer
 </template>
 

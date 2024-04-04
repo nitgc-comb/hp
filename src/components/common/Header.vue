@@ -4,5 +4,5 @@
     .navi-bar
       router-link.navi-item(to="/") Home
       router-link.navi-item(to="/about") About
-      // router-link.navi-item(to="/works") Works
+      //- router-link.navi-item(to="/works") Works
 </template>
