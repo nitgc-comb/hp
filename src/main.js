@@ -1,8 +1,10 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+
 import App from './App.vue'
 import router from './router'
 
-import { Carousel, CarouselItem } from 'element-ui'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -20,8 +22,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-Vue.use(Carousel)
-Vue.use(CarouselItem)
+import './styles/style.scss'
+
+const app = createApp(App)
+
+app.use(ElementPlus)
+app.use(router)
 
 library.add(
   faInfoCircle,
@@ -36,13 +42,6 @@ library.add(
   faExternalLinkAlt,
   faCheckSquare
 )
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+app.component('font-awesome-icon', FontAwesomeIcon)
 
-require('./styles/style.scss')
-
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app')
