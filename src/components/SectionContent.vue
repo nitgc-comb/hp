@@ -1,8 +1,8 @@
 <template lang="pug">
   .section-content(:class="{ 'img-l': left, 'img-r': right}")
     img.section-content-img(
-      v-if="image"
-      :src="require(`@/assets/images/${image}.jpg`)"
+      v-if="images[image]"
+      :src="images[image]"
     )
     .content-explain
       h4.sub-section-title
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { filename } from 'pathe/utils'
+
 export default {
   props: {
     icon: {
@@ -30,6 +32,15 @@ export default {
     right: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    images: () => {
+      const glob = import.meta.glob(`@/assets/images/*.jpg`, { eager: true })
+
+      return Object.fromEntries(
+        Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+      )
     }
   }
 }
